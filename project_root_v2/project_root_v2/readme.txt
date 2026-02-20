@@ -47,12 +47,12 @@ Open a terminal (Mac/Linux) or Anaconda Prompt (Windows).
 
 Run the following commands exactly:
 
-conda create -n visual-rag python=3.11 -y
-conda activate visual-rag
+conda create -n visual-rag-v2 python=3.11 -y
+conda activate visual-rag-v2
 
 After activation, your terminal prompt should show:
 
-(visual-rag):
+(visual-rag-v2):
 
 This means you are inside the correct environment.
 
@@ -83,7 +83,7 @@ as these created by a separate data processing code.
 After the above folder structure is ready and all files are
 in their right place, go to the terminal and run
 
-conda activate visual-rag
+conda activate visual-rag-v2
 pip install -r requirements.txt
 
 This commands installs all necessary libraries.

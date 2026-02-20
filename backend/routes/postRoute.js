@@ -14,7 +14,7 @@ router.post('/images', async (req, res) => {
 
   let reply;
   try {
-    reply = await natsRequest(process.env.NATS_SUBJECT, { query });
+    reply = await natsRequest(process.env.NATS_SUBJECT ?? nats_subject, { query });
 
     const finalreply = reply.map( item =>{
       const safefilename = encodeURIComponent(item.filename);

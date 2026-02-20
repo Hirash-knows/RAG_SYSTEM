@@ -75,13 +75,13 @@ def function_5(results, k: int):
     i = 1
     for meta, score in results:
         path = Path(meta["path"])
-        if not path.exists():
-            logger.warning(f"Missing file on disk, skipping: {path}")
-            continue
+        #if not path.exists():
+         #   logger.warning(f"Missing file on disk, skipping: {path}")
+          #  continue
         item = {
             "rank" : i,
             "filename" : path.name,
-            "path" : str(path),
+           # "path" : str(path),
             "score" : round(float(score), 6),
             "caption" : meta.get("caption"),
         }
@@ -91,16 +91,3 @@ def function_5(results, k: int):
             break
     return out
         
-
-
-# TOP_K = 15
-# HYBRID_CANDIDATES = 300
-# QUERY = "a bed with wooden floor"
-
-
-# if __name__ == "__main__":
-#     store = function_3(INDEX_DIR)
-#     logger.info("Loaded existing index.")
-#     results = function_4(store, QUERY, TOP_K)
-#     output = function_5(results, TOP_K)
-#     print(json.dumps(output, indent=2))
